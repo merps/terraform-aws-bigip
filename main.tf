@@ -102,17 +102,20 @@ resource "aws_instance" "f5_bigip" {
   }
 
   # build user_data file from template
-  user_data = templatefile(
-    "${path.module}/f5_onboard.tmpl",
-    {
-      DO_URL      = var.DO_URL,
-      AS3_URL     = var.AS3_URL,
-      TS_URL      = var.TS_URL,
-      libs_dir    = var.libs_dir,
-      onboard_log = var.onboard_log,
-      secret_id   = var.aws_secretmanager_secret_id
-    }
-  )
+  #user_data = templatefile(
+  #  "${path.module}/f5_onboard.tmpl",
+  #  {
+  #    DO_URL      = var.DO_URL,
+  #    AS3_URL     = var.AS3_URL,
+  #    TS_URL      = var.TS_URL,
+  #    libs_dir    = var.libs_dir,
+  #    onboard_log = var.onboard_log,
+  #    secret_id   = var.aws_secretmanager_secret_id
+  #  }
+  #)
+
+  # build user_data for cloud-init
+  user_data = file(var.cloud_init)
 
   depends_on = [aws_eip.mgmt]
 

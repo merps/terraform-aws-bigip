@@ -74,7 +74,7 @@ variable "aws_secretmanager_secret_id" {
   type        = string
 }
 
-
+/*
 ## Please check and update the latest DO URL from https://github.com/F5Networks/f5-declarative-onboarding/releases
 # always point to a specific version in order to avoid inadvertent configuration inconsistency
 variable DO_URL {
@@ -108,4 +108,9 @@ variable onboard_log {
   description = "Directory on the BIG-IP to store the cloud-init logs"
   type        = string
   default     = "/var/log/startup-script.log"
+}
+*/
+variable cloud_init {
+  description = "Cloud-Init"
+  type        = string
 }
