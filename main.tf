@@ -17,7 +17,23 @@ data "aws_ami" "f5_ami" {
     values = ["${var.f5_ami_search_name}"]
   }
 }
+#
+# build user_data for cloud-init
+#
+data "template_file" "do_base" {
+    template = file(var.cloud_init)
+  }
 
+data "template_cloudinit_config" "config" {
+  gzip          = false
+  base64_encode = false
+
+  part {
+    filename     = var.cloud_init
+    content_type = "text/cloud-config"
+    content      = data.template_file.do_base.rendered
+  }
+}
 # 
 # Create Management Network Interfaces
 #
@@ -90,7 +106,6 @@ resource "aws_instance" "f5_bigip" {
     }
   }
 
-
   # set the private interface only if an interface is defined
   dynamic "network_interface" {
     for_each = length(aws_network_interface.private) > count.index ? toset([aws_network_interface.private[count.index].id]) : toset([])
@@ -113,9 +128,7 @@ resource "aws_instance" "f5_bigip" {
   #    secret_id   = var.aws_secretmanager_secret_id
   #  }
   #)
-
-  # build user_data for cloud-init
-  user_data = file(var.cloud_init)
+  user_data = data.template_cloudinit_config.config.rendered
 
   depends_on = [aws_eip.mgmt]
 
