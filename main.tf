@@ -21,7 +21,7 @@ data "aws_ami" "f5_ami" {
 # build user_data for cloud-init
 #
 data "template_file" "do_base" {
-    template = [var.cloud_init]
+    template = var.cloud_init
   }
 
 data "template_cloudinit_config" "config" {
