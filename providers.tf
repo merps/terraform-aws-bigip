@@ -1,11 +1,11 @@
 terraform {
   required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
     bigip = {
       source = "F5Networks/bigip"
-      version = "1.4.0"
+      version = "1.4"
+    }
+    aws = {
+      source = "hashicorp/aws"
     }
     random = {
       source = "hashicorp/random"
