@@ -73,6 +73,9 @@ Temporary Items
 # *.iml
 # *.ipr
 
+# Git itself
+.gitignore
+
 # CMake
 cmake-build-*/
 
