@@ -128,6 +128,7 @@ resource "aws_instance" "f5_bigip" {
   #    secret_id   = var.aws_secretmanager_secret_id
   #  }
   #)
+  # build cloud-init template from passed
   user_data = data.template_cloudinit_config.config.rendered
 
   depends_on = [aws_eip.mgmt]

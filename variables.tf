@@ -7,7 +7,7 @@ variable "prefix" {
 variable "f5_ami_search_name" {
   description = "BIG-IP AMI name to search for"
   type        = string
-  default     = "F5 Networks BIGIP-14.* PAYG - Best 200Mbps*"
+  default     = "F5 BIGIP-15.1.0.2-0.0.9 PAYG-Best 25Mbps*"
 }
 
 variable "f5_instance_count" {
@@ -19,7 +19,7 @@ variable "f5_instance_count" {
 variable "ec2_instance_type" {
   description = "AWS EC2 instance type"
   type        = string
-  default     = "m4.large"
+  default     = "c4.xlarge"
 }
 
 variable "ec2_key_name" {
