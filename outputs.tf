@@ -34,5 +34,5 @@ output "public_addresses" {
 
 output "private_addresses" {
   description = "List of BIG-IP private addresses"
-  value       = flattern(aws_network_interface.private[*].private_ips)
+  value       = flatten(aws_network_interface.private[*].private_ips)
 }
