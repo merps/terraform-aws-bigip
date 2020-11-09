@@ -1,7 +1,7 @@
 # BIG-IP Management Public IP Addresses
 output "mgmt_public_ips" {
   description = "List of BIG-IP public IP addresses for the management interfaces"
-  value       = aws_eip.mgmt[*].public_ip
+  value       = flatten(aws_eip.mgmt[*].public_ip)
 }
 
 # BIG-IP Management Public DNS
@@ -19,20 +19,20 @@ output "mgmt_port" {
 # Public Network Interface
 output "public_nic_ids" {
   description = "List of BIG-IP public network interface ids"
-  value       = aws_network_interface.public[*].id
+  value       = flatten(aws_network_interface.public[*].id)
 }
 
 output "mgmt_addresses" {
   description = "List of BIG-IP management addresses"
-  value       = aws_network_interface.mgmt[*].private_ips
+  value       = flatten(aws_network_interface.mgmt[*].private_ips)
 }
 
 output "public_addresses" {
   description = "List of BIG-IP public addresses"
-  value       = aws_network_interface.public[*].private_ips
+  value       = flatten(aws_network_interface.public[*].private_ips)
 }
 
 output "private_addresses" {
   description = "List of BIG-IP private addresses"
-  value       = aws_network_interface.private[*].private_ips
+  value       = flattern(aws_network_interface.private[*].private_ips)
 }
