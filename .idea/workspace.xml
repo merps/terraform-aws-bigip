@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd13f94b-8194-473e-961b-5d3621f7806f" name="Default Changelist" comment="updated for cloud-init, well, an attempt" />
+    <list default="true" id="fd13f94b-8194-473e-961b-5d3621f7806f" name="Default Changelist" comment="updated for cloud-init, well, an attempt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,6 +69,8 @@
       <workItem from="1603069505318" duration="7172000" />
       <workItem from="1603170044620" duration="2259000" />
       <workItem from="1603690532623" duration="829000" />
+      <workItem from="1603691505578" duration="2348000" />
+      <workItem from="1604503369061" duration="1180000" />
     </task>
     <task id="LOCAL-00001" summary="updated for cloud-init, well, an attempt">
       <created>1603077741609</created>
@@ -106,5 +110,9 @@
       <screen x="0" y="0" width="3440" height="1404" />
     </state>
     <state x="455" y="251" key="CommitChangelistDialog2/0.0.3440.1404@0.0.3440.1404" timestamp="1603077691453" />
+    <state x="477" y="374" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603691524130">
+      <screen x="0" y="0" width="3440" height="1404" />
+    </state>
+    <state x="477" y="374" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.3440.1404@0.0.3440.1404" timestamp="1603691524130" />
   </component>
 </project>
