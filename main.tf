@@ -20,6 +20,7 @@ data "aws_ami" "f5_ami" {
 #
 # build user_data for cloud-init
 #
+# TODO - cloud-init that is in this is static, need to remove rendering for userdata push
 data "template_file" "do_base" {
     template = var.cloud_init
   }
@@ -116,6 +117,7 @@ resource "aws_instance" "f5_bigip" {
     }
   }
 
+  # TODO - cloud-init that is in this is static, need to remove rendering for userdata push
   # build user_data file from template
   #user_data = templatefile(
   #  "${path.module}/f5_onboard.tmpl",

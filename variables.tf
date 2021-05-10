@@ -82,7 +82,7 @@ variable DO_URL {
   type        = string
   default     = "https://github.com/F5Networks/f5-declarative-onboarding/releases/download/v1.8.0/f5-declarative-onboarding-1.8.0-2.noarch.rpm"
 }
-## Please check and update the latest AS3 URL from https://github.com/F5Networks/f5-appsvcs-extension/releases/latest 
+## Please check and update the latest AS3 URL from https://github.com/F5Networks/f5-appsvcs-extension/releases/latest
 # always point to a specific version in order to avoid inadvertent configuration inconsistency
 variable AS3_URL {
   description = "URL to download the BIG-IP Application Service Extension 3 (AS3) module"
@@ -90,7 +90,7 @@ variable AS3_URL {
   default     = "https://github.com/F5Networks/f5-appsvcs-extension/releases/download/v3.14.0/f5-appsvcs-3.14.0-4.noarch.rpm"
 }
 
-## Please check and update the latest TS URL from https://github.com/F5Networks/f5-telemetry-streaming/releases/latest 
+## Please check and update the latest TS URL from https://github.com/F5Networks/f5-telemetry-streaming/releases/latest
 # always point to a specific version in order to avoid inadvertent configuration inconsistency
 variable TS_URL {
   description = "URL to download the BIG-IP Telemetry Streaming module"
@@ -111,6 +111,8 @@ variable onboard_log {
 }
 */
 variable cloud_init {
+  ## TODO lift the f5-cwl-thing one
   description = "Cloud-Init"
   type        = string
+  default = "cloud-init.tmpl"
 }

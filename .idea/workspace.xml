@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd13f94b-8194-473e-961b-5d3621f7806f" name="Default Changelist" comment="updated for cloud-init, well, an attempt">
+      <change afterPath="$PROJECT_DIR$/cloud-init.tmpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/f5_onboard.tmpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/variables.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="TF_FMT" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210510_0000" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -71,6 +75,9 @@
       <workItem from="1603690532623" duration="829000" />
       <workItem from="1603691505578" duration="2348000" />
       <workItem from="1604503369061" duration="1180000" />
+      <workItem from="1604897644997" duration="4383000" />
+      <workItem from="1610589548641" duration="94000" />
+      <workItem from="1620621620901" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="updated for cloud-init, well, an attempt">
       <created>1603077741609</created>
